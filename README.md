@@ -4,8 +4,8 @@ See pr2513: https://github.com/apollographql/apollo-client/issues/2513
 
 #### to test
 - `npm run start`
-- Click `trigger error`
-- click `refetch`
+- Click `REFETCH WITH ERROR`
+- click `REFETCH WITH DATA`
 
 #### result
 - error not cleared on a successful refetch result
