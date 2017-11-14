@@ -7,8 +7,8 @@ const displayState = (val) => {
   if (val === undefined) result = 'undefined'
   else if (val === null) result = 'null'
   else if (typeof vall === 'object') result = 'object'
-  else result = val.toString()
-  return result
+  else result = val
+  return result.toString()
 }
 
 class App extends Component {
@@ -49,7 +49,7 @@ class App extends Component {
         </header>
         <div>
           <p>loading: <b>{displayState(loading)}</b><br />
-          refetching/mutating: <b>{displayState(refetching)}</b><br />
+          refetching: <b>{displayState(refetching)}</b><br />
           error: <b>{displayState(error)}</b><br />
           people: <b>{displayState(people)}</b></p>
         </div>
@@ -66,5 +66,10 @@ export default graphql(
         name
       }
     }
-  `
+  `, {
+  options: props => ({
+    fetchPolicy: 'network-only',
+    notifyOnNetworkStatusChange: true,
+  }),
+}
 )(App);
