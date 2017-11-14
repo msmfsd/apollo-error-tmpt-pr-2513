@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+}
+button:disabled {
+  opacity: 0.4;
+}
+p {
+  line-height: 1.5;
+}
