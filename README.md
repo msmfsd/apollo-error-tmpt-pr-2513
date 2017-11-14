@@ -10,4 +10,6 @@ See pr2513: https://github.com/apollographql/apollo-client/issues/2513
 #### result
 - error not cleared on a successful refetch result
 - loading not updated while doing a refetch
-- people data not set to undefined on error
+- people data not set to undefined on error^
+
+^ data is cached? note that fetchPolicy is `network-only` so it shouldn't cache I would think
