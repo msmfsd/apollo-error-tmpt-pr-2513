@@ -44,8 +44,8 @@ class App extends Component {
         <header>
           <h1><i>apollo-client</i> ISSUE #2513</h1>
           <p>Trigger error then click refetch, error is not cleared - props also logged to console</p>
-          <p><button disabled={loading || refetching || errorTriggered} onClick={this.triggerError}>TRIGGER ERROR</button></p>
-          <p><button disabled={loading || refetching || !canRefetch} onClick={this.refetch}>REFETCH</button></p>
+          <p><button disabled={loading || refetching || errorTriggered} onClick={this.triggerError}>REFETCH WITH ERROR</button></p>
+          <p><button disabled={loading || refetching || !canRefetch} onClick={this.refetch}>REFETCH WITH DATA</button></p>
         </header>
         <div>
           <p>loading: <b>{displayState(loading)}</b><br />
